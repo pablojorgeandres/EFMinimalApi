@@ -23,6 +23,7 @@ public class TasksContext : DbContext
 
                 x.Property(p => p.Name).IsRequired().HasMaxLength(150);
                 x.Property(p => p.Description);
+                x.Property(p => p.ImportanceLevel);
         });
         
         modelBuilder.Entity<EFMinimalApi.Models.Task>( x => 
